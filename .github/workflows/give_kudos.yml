@@ -13,7 +13,11 @@ jobs:
   run-kudos-cron:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3 
+      - uses: actions/checkout@v3
+      - name: Setup timezone
+        uses: zcong1993/setup-timezone@master
+        with:
+          timezone: Australia/Sydney
       - uses: actions/setup-python@v4
         with:
           python-version: '3.7.6'
