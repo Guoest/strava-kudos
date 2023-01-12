@@ -14,6 +14,8 @@ class KudosGiver:
     def __init__(self, max_retry_scroll=3, max_run_duration=540) -> None:
         self.EMAIL = os.environ.get('STRAVA_EMAIL')
         self.PASSWORD = os.environ.get('STRAVA_PASSWORD')
+        
+        print(self.EMAIL)
 
         if self.EMAIL is None or self.PASSWORD is None:
             raise Exception(f"Must set environ variables EMAIL AND PASSWORD. \
