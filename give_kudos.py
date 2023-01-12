@@ -40,7 +40,7 @@ class KudosGiver:
         self.page.fill("#password", self.PASSWORD)
         self.page.click("button[type='submit']")
         print("---Logged in!!---")
-        self.page.goto(os.path.join(BASE_URL, "dashboard"), wait_until="domcontentloaded")
+        self.page.goto(os.path.join(BASE_URL, "dashboard?club_id=233727&feed_type=club"), wait_until="domcontentloaded")
         
 
     def locate_kudos_buttons_and_maybe_give_kudos(self, button_locator) -> int:
