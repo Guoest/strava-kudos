@@ -6,12 +6,11 @@ on:
     - cron: "30 9 * * *"
   workflow_dispatch:
 
-env:
-  STRAVA_EMAIL: ${{ secrets.STRAVA_EMAIL }}
-  STRAVA_PASSWORD: ${{ secrets.STRAVA_PASSWORD }}
+
 jobs:
   run-kudos-cron:
     runs-on: ubuntu-20.04
+    environment: STRAVA_EMAIL
     steps:
       - uses: actions/checkout@v3
       - name: Setup timezone
@@ -25,4 +24,7 @@ jobs:
       - run: pip install -r requirements.txt
       - run: playwright install
       - run: python give_kudos.py
+        env:
+          STRAVA_EMAIL: ${{ secrets.STRAVA_EMAIL }}
+          STRAVA_PASSWORD: ${{ secrets.STRAVA_PASSWORD }}
         
