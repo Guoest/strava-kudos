@@ -25,7 +25,7 @@ class KudosGiver:
         p = sync_playwright().start()
         self.browser = p.firefox.launch() # does not work in chrome
         self.page = self.browser.new_page()
-        
+
         self.start_time = time.time()
 
 
@@ -38,8 +38,8 @@ class KudosGiver:
         self.page.fill("#password", self.PASSWORD)
         self.page.click("button[type='submit']")
         print("---Logged in!!---")
-        self.page.goto(os.path.join(BASE_URL, "dashboard"), wait_until="domcontentloaded")
-        
+        self.page.goto(os.path.join(BASE_URL, "dashboard?club_id=233727&feed_type=club"), wait_until="domcontentloaded")
+
 
     def locate_kudos_buttons_and_maybe_give_kudos(self, button_locator) -> int:
         """
@@ -80,10 +80,10 @@ class KudosGiver:
             kudos_given = self.locate_kudos_buttons_and_maybe_give_kudos(button_locator=button_locator)
             if not kudos_given:
                 curr_retry -= 1
-        
+
         print("That's all, folks! Terminating... ")
         self.browser.close()
-        
+
 
 def main():
     kg = KudosGiver()
