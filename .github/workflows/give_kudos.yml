@@ -19,7 +19,9 @@ jobs:
           cache: 'pip'
       - run: pip install -r requirements.txt
       - run: playwright install
-      - run: python give_kudos.py
+      - run: python give_kudos_runnsw_club.py
+      - run: python give_kudos_striders_club.py
+      - run: python give_kudos_mrc_club.py
         env:
           STRAVA_EMAIL: ${{ secrets.STRAVA_EMAIL }}
           STRAVA_PASSWORD: ${{ secrets.STRAVA_PASSWORD }}
