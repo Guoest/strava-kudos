@@ -1,9 +1,9 @@
 name: Give Strava Kudos
 
 on:
-  # Triggers every 11:30am
+  # Triggers every 3:00am UTC
   schedule:
-    - cron: "0 1 * * *"
+    - cron: "0 3 * * *"
   workflow_dispatch:
 
 
