@@ -23,7 +23,7 @@ jobs:
         env:
           STRAVA_EMAIL: ${{ secrets.STRAVA_EMAIL }}
           STRAVA_PASSWORD: ${{ secrets.STRAVA_PASSWORD }}
-      - run: python give_kudos_cp_club.py
+      - run: python give_kudos_mrc_club.py
         env:
           STRAVA_EMAIL: ${{ secrets.STRAVA_EMAIL }}
           STRAVA_PASSWORD: ${{ secrets.STRAVA_PASSWORD }}
