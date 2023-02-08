@@ -35,4 +35,4 @@ Manual testing was done in Python 3.7.6.
 ## Contributions
 Let me know if you wish to add anything or if there are any issues!
 
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](linktr.ee/yichengguo)
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://linktr.ee/yichengguo/)
