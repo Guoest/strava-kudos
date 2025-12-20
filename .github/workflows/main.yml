@@ -1,13 +1,1 @@
-name: Daily Ping
 
-on:
-  schedule:
-    - cron: "0 0 * * *" # runs every day at 00:00 UTC
-  workflow_dispatch:
-
-jobs:
-  ping:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Curl ping
-        run: curl -sSf https://lqxprmnnlnrmhecxyeqn.supabase.co/storage/v1/object/public/monitor/ml.png
